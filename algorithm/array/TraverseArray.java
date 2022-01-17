@@ -67,15 +67,5 @@ public class TraverseArray{
             }
             System.out.println("");
         }
-        /*
-        System.out.println("----traverse by diagonal 4------");
-        for(int l=len; l<2*len-1; l++){
-            for(int i=l-len+1; i<=len-1; i++){
-                int j=i-l+len-1;
-                System.out.print(" " + arr[i][j]);
-            }
-            System.out.println("");
-        }
-        */
     }
 }
