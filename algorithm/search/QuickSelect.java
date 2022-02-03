@@ -6,6 +6,7 @@ public class QuickSelect{
         shuffle(arr);
         System.out.println(Arrays.toString(arr));
         System.out.println(">>> " + qs(arr, 0, arr.length-1, in));
+        System.out.println(">>> " + qs_iteration(arr, in));
     }
 
     public static void shuffle(int[] arr){
@@ -40,6 +41,20 @@ public class QuickSelect{
         else return qs(arr, p+1, hi, target);
         */
     }
+
+    public static int qs_iteration(int[] arr, int target){
+        int lo = 0;
+        int hi = arr.length - 1;
+        while(lo <= hi){
+            int p = partition(arr, lo, hi);
+            int rank = arr.length - p;
+            if(rank == target) return arr[p];
+            else if(rank < target) hi = p - 1;
+            else lo = p + 1;
+        }
+        return -1;
+    }
+
 
     public static int partition(int[] arr, int lo, int hi){
         if(lo == hi) return lo;
