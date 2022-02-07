@@ -35,7 +35,7 @@ public class Boundary{
             else if(arr[mid] > target) hi = mid - 1;
             else hi = mid - 1;
         }
-        if(lo >= arr.length || arr[lo] != target) return -1;
+        //if(lo >= arr.length || arr[lo] != target) return -1;
         return lo;
     }
 
@@ -48,7 +48,7 @@ public class Boundary{
             else if(arr[mid] > target) hi = mid - 1;
             else lo = mid + 1;
         }
-        if(hi < 0 || arr[hi] != target) return -1;
+        //if(hi < 0 || arr[hi] != target) return -1;
         return hi;
     }
 
