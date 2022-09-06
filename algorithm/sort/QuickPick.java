@@ -1,5 +1,8 @@
 import java.util.*;
 public class QuickPick{
+    // worst O(n^2)
+    // average O(n)
+
     public static void main(String[] args){
         int[] arr = {3,5,1,2,6,8,7,9,0,4};
         int input = Integer.valueOf(args[0]);
